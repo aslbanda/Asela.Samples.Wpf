@@ -93,5 +93,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Asela.Samples.Wpf.Business\Asela.Samples.Wpf.Business.csproj">
+      <Project>{6c47f013-f529-4ea0-bf1d-46fed35aa789}</Project>
+      <Name>Asela.Samples.Wpf.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Asela.Samples.Wpf.Entities\Asela.Samples.Wpf.Entities.csproj">
+      <Project>{cfb2ed72-17bf-478d-b0eb-ab66c6bc4afb}</Project>
+      <Name>Asela.Samples.Wpf.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

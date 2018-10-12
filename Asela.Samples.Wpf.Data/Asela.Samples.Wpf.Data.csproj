@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context.cs" />
+    <Compile Include="Migrations\201810111938254_InitialDbCreation.cs" />
+    <Compile Include="Migrations\201810111938254_InitialDbCreation.Designer.cs">
+      <DependentUpon>201810111938254_InitialDbCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +64,11 @@
       <Project>{cfb2ed72-17bf-478d-b0eb-ab66c6bc4afb}</Project>
       <Name>Asela.Samples.Wpf.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810111938254_InitialDbCreation.resx">
+      <DependentUpon>201810111938254_InitialDbCreation.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

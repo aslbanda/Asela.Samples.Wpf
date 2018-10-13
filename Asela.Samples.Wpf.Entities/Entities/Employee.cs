@@ -22,5 +22,10 @@ namespace Asela.Samples.Wpf.Entities.Entities
         public string AddressLine2 { get; set; }
 
         public string AddressLine3 { get; set; }
+
+        [ForeignKey("Department")]
+        public int DeptId { get; set; }
+
+        public virtual Department Department { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace Asela.Samples.Wpf.Data
 {
     public class Context : DbContext
     {
-        public Context() : base()
+        public Context() : base("name=SampleConnectionString")
         {
         }
 

@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asela.Samples.Wpf.Business"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asela.Samples.Wpf.Api", "Asela.Samples.Wpf.Api\Asela.Samples.Wpf.Api.csproj", "{68E83E88-BAFB-4305-ACC6-AF309DCCE1F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asela.Samples.Wpf.Definitions", "Asela.Samples.Wpf.Definitions\Asela.Samples.Wpf.Definitions.csproj", "{1D3C9812-F141-4C5D-978B-836AFA138BDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{68E83E88-BAFB-4305-ACC6-AF309DCCE1F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68E83E88-BAFB-4305-ACC6-AF309DCCE1F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68E83E88-BAFB-4305-ACC6-AF309DCCE1F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D3C9812-F141-4C5D-978B-836AFA138BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D3C9812-F141-4C5D-978B-836AFA138BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D3C9812-F141-4C5D-978B-836AFA138BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D3C9812-F141-4C5D-978B-836AFA138BDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{FF80624E-DBEB-4685-9BCF-5C440DD29772} = {7004ED33-E109-4C86-96C0-D08CAF115057}
 		{6C47F013-F529-4EA0-BF1D-46FED35AA789} = {FF80624E-DBEB-4685-9BCF-5C440DD29772}
 		{68E83E88-BAFB-4305-ACC6-AF309DCCE1F3} = {F9D71B2C-4E13-4B26-89BF-F4DA2689B2C8}
+		{1D3C9812-F141-4C5D-978B-836AFA138BDA} = {F4B59F62-1E60-4333-84C0-AE04D7A608B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C46A914B-7F95-4DD6-A326-6073D5BF0CFB}

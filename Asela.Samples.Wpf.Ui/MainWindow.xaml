@@ -4,9 +4,56 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Asela.Samples.Wpf.Ui"
+        xmlns:vm="clr-namespace:Asela.Samples.Wpf.Ui.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="433.099" Width="955.31">
     <Grid>
-        
+        <TabControl Margin="10">
+            <TabControl.DataContext>
+                <vm:MainWindowVM></vm:MainWindowVM></TabControl.DataContext>
+            <TabItem Header="Employees">
+                <Grid Background="#FFE5E5E5">
+                    <GroupBox Header="Add/Update" HorizontalAlignment="Left" Width="350">
+                        <Grid>
+                            <Label Content="ID :" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="83"/>
+                            <TextBox Height="23" TextWrapping="Wrap" IsEnabled="False" Text="{Binding Path=ActiveEmployee.Id}" VerticalAlignment="Top" Margin="83,14,10,0"/>
+                            <Label Content="Name :" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,38,0,0" Width="83"/>
+                            <TextBox Height="23" TextWrapping="Wrap" Text="{Binding Path=ActiveEmployee.Name}" VerticalAlignment="Top" Margin="83,42,10,0"/>
+                            <Label Content="Address 1 :" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,66,0,0" Width="83"/>
+                            <TextBox Height="23" TextWrapping="Wrap" Text="{Binding Path=ActiveEmployee.AddressLine1}" VerticalAlignment="Top" Margin="83,70,10,0"/>
+                            <Label Content="Address 2 :" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,94,0,0" Width="83"/>
+                            <TextBox Height="23" TextWrapping="Wrap" Text="{Binding Path=ActiveEmployee.AddressLine2}" VerticalAlignment="Top" Margin="83,98,10,0"/>
+                            <Label Content="Address 3 :" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,122,0,0" Width="83"/>
+                            <TextBox Height="23" TextWrapping="Wrap" Text="{Binding Path=ActiveEmployee.AddressLine3}" VerticalAlignment="Top" Margin="83,126,10,0"/>
+                            <ComboBox HorizontalAlignment="Left" ItemsSource="{Binding Path=DepartmentList}" DisplayMemberPath="Name" SelectedValue="{Binding Path=ActiveEmployee.DeptId}" VerticalAlignment="Top" Width="245" Margin="83,154,0,0"/>
+                            <Label Content="Department :" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,153,0,0" Width="83"/>
+                            <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="173,192,0,0"/>
+                            <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="253,192,0,0"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Search" Margin="355,0,0,0">
+                        <Grid>
+                            <Label Content="By Name :" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="83"/>
+                            <TextBox Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="83,14,0,0" HorizontalAlignment="Left" Width="185"/>
+                            <Button Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="273,16,0,0"/>
+                            <Button Content="Show All" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="83,42,0,0"/>
+                            <DataGrid Margin="10,77,10,10" ItemsSource="{Binding Path=EmployeesList, Mode=OneWay}" AutoGenerateColumns="False" CanUserAddRows="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Employee ID" Width="80" Binding="{Binding Id}"/>
+                                    <DataGridTextColumn Header="Name" Width="125" Binding="{Binding Name}"/>
+                                    <DataGridTextColumn Header="Address Line 1" Width="125"/>
+                                    <DataGridTextColumn Header="Address Line 2" Width="125"/>
+                                    <DataGridTextColumn Header="Address Line 3" Width="125"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Departments">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
